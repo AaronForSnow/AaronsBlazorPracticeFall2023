@@ -1,5 +1,19 @@
-﻿<h3>ToDoList</h3>
+﻿@*@page "/todolist"
+<h3>ToDoList</h3>
+
+<ul>
+	@foreach(var item in ToDoItems)
+	{
+		<li>@item</li>
+	}
+</ul>
+
+<input @bind=
 
 @code {
-
-}
+	private List<string> ToDoItems = new List<string/>()
+	private void Save()
+	{
+		ToDoItems.Add(string.Empty);
+	}
+}*@

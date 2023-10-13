@@ -9,7 +9,7 @@
     }
 </ul>
 
-<input @bind="newTodo" placeholder="Something you need todo" />
+<input @bind="newTodo" @bind:event ="oninput" placeholder="Something you need todo" />
 <button @onclick="AddTodo">Add todo</button>
 
 @code {
